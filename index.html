@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg">
+    <title>Flit - Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container disable">
+        <h2>Flit Simple Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <Button id="brightness" class="active">Brightness</Button>
+                        <Button id="saturation">Saturation</Button>
+                        <Button id="inversion">Inversion</Button>
+                        <Button id="grayscale">Grayscale</Button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200" >
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                      <Button id="left"><i class="fa-solid fa-rotate-left"></i></Button>
+                      <Button id="right"><i class="fa-solid fa-rotate-right"></i></Button>
+                      <Button id="horizontal"><i class="bx bx-reflect-vertical"></i></Button>
+                      <Button id="vertical"><i class="bx bx-reflect-horizontal"></i></Button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="image-placeholder.svg" alt="preview-image">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                 <button class="choose-img">Chosse Image</button>
+                 <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+       
+       <script src="script.js"></script>
+
+</body>
+</html>
